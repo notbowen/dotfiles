@@ -2,26 +2,33 @@
 # Starship
 eval "$(starship init zsh)"
 
-# Syntax Highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Set GPG_TTY
+export GPG_TTY=$(tty)
 
-# Auto Suggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Syntax Highlighting & Auto Suggestions
+if [[ $(uname) == "Darwin" ]]; then
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [[ $(uname) == "Linux" ]]; then
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-# ===== PROGRAMS =====
-# OCaml
-eval $(opam env)
+# ===== MacOS Programs =====
+if [[ $(uname) == "Darwin" ]]; then
+    # OCaml
+    eval $(opam env)
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+    # nvm
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
-# Docker
-fpath=(/Users/bowen/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
+    # Docker
+    fpath=(/Users/bowen/.docker/completions $fpath)
+    autoload -Uz compinit
+    compinit
+fi
 
 # ===== Additional Configs =====
 # Program Aliases
-alias vim="nvim"
+alias vim="/opt/nvim-linux-x86_64/bin/nvim"
 alias lg="lazygit"
