@@ -63,3 +63,9 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 # asdf
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Rust
+if [[ $(uname) == "Linux" ]]; then
+    . "$HOME/.cargo/env"
+    alias ls=/home/bowen/.cargo/bin/exa
+fi
