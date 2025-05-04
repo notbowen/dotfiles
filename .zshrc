@@ -41,10 +41,10 @@ if [[ $(uname) == "Darwin" ]]; then
     alias vim="nvim"
 elif [[ $(uname) == "Linux" ]]; then
     alias vim="/opt/nvim-linux-x86_64/bin/nvim"
+    alias bat="batcat"
 fi
 alias lg="lazygit"
 alias act="source .venv/bin/activate"
-alias bat="batcat"
 alias pwn="docker run --security-opt seccomp=unconfined --privileged --cap-add=SYS_PTRACE -p 31337:31337 -v ./:/pwn -it pwn:pwn bash"
 
 # Created by `pipx` on 2025-03-18 05:07:29
@@ -69,3 +69,4 @@ if [[ $(uname) == "Linux" ]]; then
     . "$HOME/.cargo/env"
     alias ls=/home/bowen/.cargo/bin/exa
 fi
+

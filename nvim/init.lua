@@ -676,6 +676,7 @@ require('lazy').setup({
         astro = {},
         marksman = {},
         prettier = {},
+        latexindent = {},
 
         -- reason_ls = {},
       }
