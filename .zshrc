@@ -68,5 +68,7 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 if [[ $(uname) == "Linux" ]]; then
     . "$HOME/.cargo/env"
     alias ls=/home/bowen/.cargo/bin/exa
+elif [[ $(uname) == "Darwin" ]]; then
+    alias ls=/Users/bowen/.cargo/bin/exa
 fi
 
