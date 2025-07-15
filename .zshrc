@@ -44,7 +44,6 @@ if [[ $(uname) == "Darwin" ]]; then
     alias vim="nvim"
 elif [[ $(uname) == "Linux" ]]; then
     alias vim="/opt/nvim-linux-x86_64/bin/nvim"
-    alias bat="batcat"
 fi
 alias lg="lazygit"
 alias act="source .venv/bin/activate"
