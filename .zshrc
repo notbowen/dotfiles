@@ -33,6 +33,9 @@ if [[ $(uname) == "Darwin" ]]; then
     fpath=(/Users/bowen/.docker/completions $fpath)
     autoload -Uz compinit
     compinit
+
+    # depot tools
+    export PATH="/Users/bowen/CTFs/tools/browser/depot_tools:$PATH"
 fi
 
 # ===== Additional Configs =====
