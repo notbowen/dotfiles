@@ -36,6 +36,11 @@ if [[ $(uname) == "Darwin" ]]; then
 
     # depot tools
     export PATH="/Users/bowen/CTFs/tools/browser/depot_tools:$PATH"
+
+elif [[ $(uname) == "Linux" ]]; then
+    # Fly.io
+    export FLYCTL_INSTALL="/home/bowen/.fly"
+    export PATH="$FLYCTL_INSTALL/bin:$PATH"
 fi
 
 # ===== Additional Configs =====
