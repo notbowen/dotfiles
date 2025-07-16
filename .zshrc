@@ -14,6 +14,12 @@ elif [[ $(uname) == "Linux" ]]; then
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+# Control Keys
+bindkey '\e[1;5D' backward-word
+bindkey '\e[1;5C' forward-word
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
+
 # Save History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

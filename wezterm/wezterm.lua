@@ -18,7 +18,7 @@ config = {
 	font_size = is_linux() and 13 or 12.5,
 
 	-- Keybinds
-	keys = not is_linux() and {
+	keys = is_linux() and {} or {
 		{ mods = "OPT", key = "LeftArrow", action = act.SendKey({ mods = "ALT", key = "b" }) },
 		{ mods = "OPT", key = "RightArrow", action = act.SendKey({ mods = "ALT", key = "f" }) },
 		{ mods = "CMD", key = "LeftArrow", action = act.SendKey({ mods = "CTRL", key = "a" }) },
