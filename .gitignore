@@ -4,6 +4,7 @@ tmux/plugins
 !nvim
 !tmux
 !wezterm
+!i3
 
 !.gitignore
 !.zshrc
