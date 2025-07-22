@@ -5,6 +5,10 @@ tmux/plugins
 !tmux
 !wezterm
 !i3
+!polybar
+!rofi
+!scripts
+!wallpapers
 
 !.gitignore
 !.zshrc
