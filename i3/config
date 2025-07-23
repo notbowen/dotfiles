@@ -204,7 +204,7 @@ bindsym $mod+p move workspace to output right
 
 # Screenshots
 bindsym Print exec --no-startup-id flameshot screen
-bindsym $mod+Print exec --no-startup-id flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
 # Background
 exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/lost-in-space.png
