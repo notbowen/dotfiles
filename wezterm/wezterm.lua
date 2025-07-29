@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local is_linux = function ()
+local is_linux = function()
 	return wezterm.target_triple:find("linux") ~= nil
 end
 
@@ -14,7 +14,7 @@ config = {
 	window_decorations = "RESIZE",
 	-- default_cursor_style = "BlinkingBar",
 	color_scheme = "tokyonight_night",
-	font = wezterm.font(is_linux() and "Maple Mono Normal NF" or "Maple Mono NF", { weight = "Bold" }),
+	font = wezterm.font("Maple Mono NF", { weight = "Bold" }),
 	font_size = is_linux() and 13 or 12.5,
 
 	-- Keybinds
