@@ -189,6 +189,20 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Enable spellchecking only for Markdown and LaTeX
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'markdown', 'tex' },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { 'en_gb' }
+  end,
+})
+
+-- Map <C-z> in insert mode to auto-correct the last misspelled word
+vim.keymap.set('i', '<C-z>', '<C-g>u<Esc>[s1z=`]a<C-g>u', {
+  desc = 'Auto-correct last misspelled word',
+})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -976,7 +990,7 @@ require('lazy').setup({
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
-        disable = { "latex", "tex" },
+        disable = { 'latex', 'tex' },
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
