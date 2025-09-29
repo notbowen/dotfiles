@@ -55,6 +55,9 @@ elif [[ $(uname) == "Linux" ]]; then
 
     # OCaml
     eval $(opam env)
+
+    # Snap
+    export PATH="$PATH:/snap/bin"
 fi
 
 # ===== Additional Configs =====
