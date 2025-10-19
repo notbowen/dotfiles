@@ -43,6 +43,9 @@ if [[ $(uname) == "Darwin" ]]; then
     # depot tools
     export PATH="/Users/bowen/CTFs/tools/browser/depot_tools:$PATH"
 
+    # incus
+    export DYLD_LIBRARY_PATH="/opt/homebrew/opt/glib/lib:/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
+
 elif [[ $(uname) == "Linux" ]]; then
     # Fly.io
     export FLYCTL_INSTALL="/home/bowen/.fly"
