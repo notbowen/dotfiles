@@ -763,6 +763,7 @@ require('lazy').setup({
         -- settings = {
         --   filetypes = { 'ocaml', 'menhir', 'ocamlinterface', 'ocamllex', 'dune' },
         -- },
+        cmd = { "opam", "exec", "--", "ocamllsp" },
       }
     end,
   },
