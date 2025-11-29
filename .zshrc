@@ -46,6 +46,9 @@ if [[ $(uname) == "Darwin" ]]; then
     # incus
     export DYLD_LIBRARY_PATH="/opt/homebrew/opt/glib/lib:/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
 
+    # Added by Antigravity
+    export PATH="/Users/bowen/.antigravity/antigravity/bin:$PATH"
+
 elif [[ $(uname) == "Linux" ]]; then
     # Fly.io
     export FLYCTL_INSTALL="/home/bowen/.fly"
