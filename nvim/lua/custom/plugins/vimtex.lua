@@ -23,6 +23,16 @@ return {
       }
       vim.opt.conceallevel = 2
       vim.opt.concealcursor = 'nc'
+
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = 'tex',
+        callback = function()
+          vim.bo.expandtab = true
+          vim.bo.shiftwidth = 2
+          vim.bo.softtabstop = 2
+          vim.bo.tabstop = 2
+        end,
+      })
     end,
   },
 }
