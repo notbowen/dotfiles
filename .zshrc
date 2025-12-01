@@ -64,6 +64,9 @@ elif [[ $(uname) == "Linux" ]]; then
 
     # Snap
     export PATH="$PATH:/snap/bin"
+
+    # DuckDB
+    export PATH='/home/bowen/.duckdb/cli/latest':$PATH
 fi
 
 # ===== Additional Configs =====
