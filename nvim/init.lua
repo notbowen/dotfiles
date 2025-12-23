@@ -194,7 +194,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Enable spellchecking only for Markdown and LaTeX
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'markdown', 'tex' },
+  pattern = { 'markdown', 'tex', 'typst' },
   callback = function()
     vim.opt_local.spell = true
     vim.opt_local.spelllang = { 'en_gb' }
@@ -722,6 +722,7 @@ require('lazy').setup({
         prettier = {},
         latexindent = {},
         ruff = {},
+        tinymist = {},
 
         -- reason_ls = {},
       }
@@ -763,7 +764,7 @@ require('lazy').setup({
         -- settings = {
         --   filetypes = { 'ocaml', 'menhir', 'ocamlinterface', 'ocamllex', 'dune' },
         -- },
-        cmd = { "opam", "exec", "--", "ocamllsp" },
+        cmd = { 'opam', 'exec', '--', 'ocamllsp' },
       }
     end,
   },
