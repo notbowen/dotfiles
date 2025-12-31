@@ -49,6 +49,9 @@ if [[ $(uname) == "Darwin" ]]; then
     # Added by Antigravity
     export PATH="/Users/bowen/.antigravity/antigravity/bin:$PATH"
 
+    # GNU tar instead of default tar
+    PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+
 elif [[ $(uname) == "Linux" ]]; then
     # Fly.io
     export FLYCTL_INSTALL="/home/bowen/.fly"
